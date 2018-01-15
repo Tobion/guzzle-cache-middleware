@@ -44,7 +44,7 @@ class MockMiddleware extends CacheMiddleware
             }
 
             if (null === $response = $this->adapter->fetch($request)) {
-                return new RejectedPromise(sprintf(
+                return new RejectedPromise(new \RuntimeException(sprintf(
                     'Record not found for request: %s %s',
                     $request->getMethod(),
                     $request->getUri()
