@@ -48,7 +48,7 @@ class MockMiddleware extends CacheMiddleware
                     'Record not found for request: %s %s',
                     $request->getMethod(),
                     $request->getUri()
-                ));
+                )));
             }
 
             $response = $this->addDebugHeader($response, 'REPLAY');
